@@ -1,8 +1,9 @@
-import { Link, useLoaderData } from "react-router";
+import { Link, useLoaderData, useNavigate } from "react-router";
 
 const Home = () => {
 
     const jobs = useLoaderData();
+    const navigate = useNavigate();
 
     return (
         <>
@@ -24,6 +25,10 @@ const Home = () => {
                     ))
                 }
             </ul>
+
+            <button
+                onClick={() => navigate("/job/create")}
+            >Create Job</button>
         </>
     )
 }

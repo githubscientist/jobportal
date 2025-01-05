@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import jobsLoader from "./loaders/unit/jobsLoader";
 import Job from "./pages/Job";
 import jobLoader from "./loaders/unit/jobLoader";
+import CreateJob from "./pages/CreateJob";
 
 const routes = [
   {
@@ -16,6 +17,10 @@ const routes = [
     element: <Job />,
     loader: jobLoader,
     hydrateFallbackElement: <p>Loading...</p>
+  },
+  {
+    path: "/job/create",
+    element: <CreateJob />
   }
 ]
 
