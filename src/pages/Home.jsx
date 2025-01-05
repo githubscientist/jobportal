@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 
 const Home = () => {
 
@@ -12,7 +12,11 @@ const Home = () => {
                     jobs.map(job => (
                         <li key={job.id}>
                             <p>
-                                <strong>{job.title}</strong>
+                                <strong>
+                                    <Link
+                                        to={`/job/${job.id}`}
+                                    >{job.title}</Link>
+                                </strong>
                                 <br />
                                 {job.description}
                             </p>
