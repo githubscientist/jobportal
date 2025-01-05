@@ -4,11 +4,22 @@ const Home = () => {
 
     const jobs = useLoaderData();
 
-    console.log(jobs);
-
     return (
         <>
-            <h1>Hello, World!</h1>
+            <h1>Jobs</h1>
+            <ul>
+                {
+                    jobs.map(job => (
+                        <li key={job.id}>
+                            <p>
+                                <strong>{job.title}</strong>
+                                <br />
+                                {job.description}
+                            </p>
+                        </li>
+                    ))
+                }
+            </ul>
         </>
     )
 }
