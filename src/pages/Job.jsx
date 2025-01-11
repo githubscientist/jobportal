@@ -37,7 +37,9 @@ const Job = () => {
             </p>
 
             <div style={{ display: "flex", gap: "1rem" }}>
-                <button>Edit</button>
+                <button
+                    onClick={() => navigate(`/job/${job.id}/edit`)}
+                >Edit</button>
                 <button
                     onClick={handleDelete}
                 >Delete</button>

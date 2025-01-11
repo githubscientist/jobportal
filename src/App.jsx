@@ -4,6 +4,7 @@ import jobsLoader from "./loaders/unit/jobsLoader";
 import Job from "./pages/Job";
 import jobLoader from "./loaders/unit/jobLoader";
 import CreateJob from "./pages/CreateJob";
+import EditJob from "./pages/EditJob";
 
 const routes = [
   {
@@ -21,6 +22,12 @@ const routes = [
   {
     path: "/job/create",
     element: <CreateJob />
+  },
+  {
+    path: "/job/:id/edit",
+    element: <EditJob />,
+    loader: jobLoader,
+    hydrateFallbackElement: <p>Loading...</p>
   }
 ]
 
